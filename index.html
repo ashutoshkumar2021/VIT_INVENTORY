@@ -5,10 +5,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
+    
     <title>VIT Inventory</title>
     
     <!--Google Fonts-->
@@ -28,6 +35,104 @@
             z-index: 2;
 
         }
+        .coho:hover{
+            background-color: #1778f2;
+        }
+        #explore
+        {
+            background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+        }
+        #gpacal
+        {
+            background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+        }
+        #cgpacal
+        {
+            background-image: url("https://images.unsplash.com/flagged/photo-1578928534298-9747fc52ec97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
+            background-size: cover;
+        }
+        #attendancecal
+        {
+            background-image: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+        }
+        #mapvitb
+        {
+            background-image: url("https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80");
+            background-size: cover;
+        }
+        #elib
+        {
+            background-image: url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+        }
+        #coderesource
+        {
+            background-image: url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+            background-size: cover;
+        }
+        #doubtsupport
+        {
+            background-image: url("https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+        }
+        #vitbclubs
+        {
+            background-image: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+            background-size: cover;
+        }
+
+        
+        .segmentcards
+        {
+           
+            padding: 10rem 0 0;
+            
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 500ms ease;
+        }
+        .segmentcards:hover
+        {
+            transform: scale(1.05);
+        }
+        .segmentcards:hover .points::after
+        {
+            transform: scaleX(1);
+        }
+      .content
+      {
+          padding: 1.5em;
+          background: hsl(213 89% 50% /.4);
+          transform: translateY(95%);
+          transition: transform 500ms ease;
+          transition: 500ms ;
+      }
+      .segmentcards:hover .content
+      {
+          transform: translateY(0);
+      }
+      .points{
+          position: relative;
+          width: max-content;
+          font-size: 155%;
+        }
+      .points::after
+      {
+          content: "";
+          height: 4px;
+          position: absolute;
+          left: 0px ;
+          bottom: 0 ;
+          width: 100% ;
+          background: greenyellow;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 500ms ease;
+          transition-delay:700ms ;
+      }
     </style> 
 </head>
  <body>
@@ -93,146 +198,156 @@
       <section id="pricing">
 
 
-        <h2><center>FEATURES</h2></center>
+        <center> <h2 class="points" > FEATURES</h2></center>
         <center> <p>Easy to use and do whatever you want to do.</p></center>
 
         <div class="row">
 
-            <div class="pri-col col-lg-4 col-md-6 col-sm-6">
-                <div class="card ho">
-                    <div class="card-header">
+            <div class="pri-col col-lg-4 col-md-6 col-sm-6  ">
+                <div class="card ho ">
+                    <div class="card-header coho">
                         <i class="fab fa-wpexplorer"></i>
-                        <h3>Explore VIT Bhopal</h3>
+                        <h3 class="_animate__animated_bounce__dealay2s">Explore VIT Bhopal</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href="explorevitb.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    
+                    <div class="card-body segmentcards " id="explore">
+                         <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <center><a href="explorevitb.html"><button class="btn btn-lg btn-block btn-outline-dark btn-color-dark" type="button">
                             Click Here</button></a>
-                    </div>
+                    </div></div>
                 </div>
             </div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho ">
                         <i class="fas fa-percent"></i>
                         <h3>GPA CALCULATOR</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Credits</p>
-                        <p>Subject Name</p>
-                        <p>Grades</p>
-                        <a href="gpa.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="gpacal">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href="gpa.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho ">
                         <i class="fas fa-percent"></i>
                         <h3>CGPA CALCULATOR</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href="cgpa.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="cgpacal">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href="cgpa.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho">
                         <i class="fas fa-percent"></i>
                         <h3>ATTENDANCE CALCULATOR</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href="attendance.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="attendancecal">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href="attendance.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho">
                         <i class="fas fa-location-arrow"></i>
                         <h3>VIT BHOPAL MAP VIEWER</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href="mapvit.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="mapvitb">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href="mapvit.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho">
                         <i class="fas fa-book"></i>
                         <h3>E-LIBRARY</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href=""><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="elib">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                         <a href=""><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho">
                         <i class="fas fa-laptop"></i>
                         <h3>CODING RESOURCES</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href="codingresources.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="coderesource">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href="codingresources.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho">
                         <i class="fas fa-laptop"></i>
                         <h3>DOUBT SUPPORT</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href=""><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="doubtsupport">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href=""><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
-                    <div class="card-header">
+                    <div class="card-header coho">
                         <i class="fas fa-graduation-cap"></i>
                         <h3>VIT-BHOPAL CLUBS</h3>
                     </div>
-                    <div class="card-body ">
-                        <p>Academics</p>
-                        <p>Faculty</p>
-                        <p>Alumni</p>
-                        <a href="vitbclubs.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                    <div class="card-body segmentcards " id="vitbclubs">
+                        <div class="content">
+                            <center> <div class="points">Academics</div></center>
+                                <center> <div class="points">Faculty</div></center>
+                                    <center><div class="points">Alumni</div></center>
+                                        <a href="vitbclubs.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
                             Click Here</button></a>
                     </div>
                 </div>
-            </div>
+            </div></div>
         </div>
 </section>
    
@@ -250,3 +365,9 @@
 </section>
   </body>
 </html>
+
+
+
+
+
+
