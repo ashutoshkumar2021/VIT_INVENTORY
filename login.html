@@ -16,9 +16,10 @@
     </div></div>
    <div id="btnSignOut" onclick="signOut()" > sign out  </div>
    </div>
+   <div id="btnHome"  onclick="window.open('index.html')"> homepage</div>
    <style>
    #btnSignOut {
-    background-color: #acd3f3; /* Green */
+    background-color: #acd3f3; 
     border: none;
     border-radius: 20px;
     color: rgb(77, 81, 83);
@@ -29,10 +30,31 @@
     font-size: 16px;
     position: absolute;
     top: 450px;
-    left :680px;
+    left :710px;
     height:30px;
     width: 80px;
     
+  }
+  #btnHome
+  {
+    background-color: #acd3f3; 
+    border: none;
+    border-radius: 20px;
+    color: rgb(77, 81, 83);
+    padding: 5px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 490px;
+    left :600px;
+    height:30px;
+    width: 80px;
+  }
+  #btnHome:hover
+  {
+      cursor: pointer;
   }
   #btnSignOut:hover
   {
