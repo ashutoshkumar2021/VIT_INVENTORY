@@ -90,7 +90,7 @@ function onSignIn(googleUser)
     let userDetails = document.querySelector('#userName')
 
      userDetails.textContent= getBasicProfile.getName()
-     const imgsrc = document.querySelector('#ProPicSrc')
+     let imgsrc = document.querySelector('#ProPicSrc')
     imgsrc.src= getBasicProfile.getImageUrl()
     
     let signOutbtn = document.querySelector('#btnSignOut')
@@ -103,7 +103,8 @@ function onSignIn(googleUser)
         gapi.auth2.getAuthInstance().signOut().then(function() {
             console.log('you are signed out')
             userName.textContent= 'you are signed out'
-            imgsrc.src = 'favicon.jpg'
+            let imgsrc = document.querySelector('#ProPicSrc')
+             imgsrc.src= 'favicon.jpg'
         })
     }
 
