@@ -16,15 +16,16 @@
     <button id="signOut" onclick="signOut()" > sign out  </button>
 
 <script>
-function onSignIn(googleuser)
-{    let getBasicProfile= googleuser.getBasicProfile()
+function onSignIn(googleUser)
+{    let getBasicProfile= googleUser.getBasicProfile()
     console.log('welcome' + JSON.stringify(getBasicProfile))
+
     let userDetails = document.querySelector('#userDetails')
 
     userDetails.textContent= getBasicProfile.getNAme()
     var userImg = document.createElement('img')
     userImg.setAttribute('src' , getBasicProfile.getImageUrl())}
-    userDetails.append('userImg')
+    userDetails.append('img')
 
 
     function signOut()
