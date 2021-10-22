@@ -20,7 +20,7 @@ function onSignIn(googleuser)
     console.log('welcome' + JSON.stringify(getBasicProfile))
     document.querySelector('#userDetails').innerText = getBasicProfile.getNAme()
     var userImg = document.querySelector('#userImg').createElement('img')
-    userImg.setAttribute('src' , getBasicProfile.getImageUrl())
+    userImg.setAttribute('src' , getBasicProfile.getImageUrl())}
 
     function signOut()
     {
@@ -28,7 +28,7 @@ function onSignIn(googleuser)
             console.log('you are signed out')
         })
     }
-}
+
 </script>
 </body>
 </html>
