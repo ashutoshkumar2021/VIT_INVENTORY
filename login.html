@@ -24,7 +24,7 @@ function onSignIn(googleUser)
 
     let userDetails = document.querySelector('#userDetails')
 
-    userDetails.textContent= getBasicProfile.getNAme()
+    userDetails.textContent= getBasicProfile.getName()
     var userImg = document.createElement('img')
     userImg.setAttribute('src' , getBasicProfile.getImageUrl())}
     userDetails.append('img')
