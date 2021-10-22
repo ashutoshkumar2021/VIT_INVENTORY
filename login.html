@@ -11,32 +11,51 @@
 </head>
 <body>
     hi!, login with your vitbhopal gmail account 22hhwaer
-   <div id='mainContent'> <div class="g-signin2" style="position: absolute  ;top:60%; left: 20%;" data-onsuccess="onSignIn"></div>
-    <div id='userDetails'><div id="userImg"></div></div>
-   <div id="btnSignOut"> <button id="signOut" onclick="signOut()" > sign out  </button></div>
-   </div><style>#btnSignOut {
-    background-color: #4CAF50; /* Green */
+   <div id='mainContent'> <div class="g-signin2" style="position: absolute  ;top: 420px; left: 490px; width: max-content;" data-onsuccess="onSignIn"></div>
+    <div id='userDetails'><div id="userName"></div><div id="userImg"><img src="" id="ProPicSrc" width="150px">
+    </div></div>
+   <div id="btnSignOut" onclick="signOut()" > sign out  </div>
+   </div>
+   <style>#btnSignOut {
+    background-color: #acd3f3; /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    border-radius: 20px;
+    color: rgb(77, 81, 83);
+    padding: 5px ;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     position: absolute;
-    top: 70%;
-    left :30%;
+    top: 420px;
+    left :680px;
+    height:30px;
+    width: 80px;
   }
   #userDetails
   {
       position: absolute;
-      top: 80px;
-      left :500px;
+      top: 30px;
+      left :450px;
       padding: auto;
       margin: 30px;
       width :300px;
-      height : 100px;
-      background-color: aqua;
+      height : 350px;
+      background-color: rgb(165, 173, 221);
+      border-radius: 20px;
+  }
+  #userName
+  {
+      position: relative;
+      top: 55%;
+      left: 10px;
+      font-size: 20px;
+  }
+  #userImg
+  {
+      position: relative;
+      left: 75px;
+      top: 10px;
   }
   </style>
 
@@ -47,9 +66,11 @@ function onSignIn(googleUser)
     let getBasicProfile= googleUser.getBasicProfile()
     console.log('welcome' + JSON.stringify(getBasicProfile))
 
-    let userDetails = document.querySelector('#userDetails')
+    let userDetails = document.querySelector('#userName')
 
      userDetails.textContent= getBasicProfile.getName()
+     let imgsrc = document.querySelector('#ProPicSrc')
+    imgsrc.src= getBasicProfile.getImageUrl()
     
     let signOutbtn = document.querySelector('#btnSignOut')
     
@@ -60,8 +81,10 @@ function onSignIn(googleUser)
     {
         gapi.auth2.getAuthInstance().signOut().then(function() {
             console.log('you are signed out')
+            userName.textContent= 'you are signed out'
         })
     }
+
 
 </script>
 </body>
