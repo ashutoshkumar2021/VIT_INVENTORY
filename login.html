@@ -10,7 +10,25 @@
     <title>login-VIT_inventory</title>
 </head>
 <body>
-    hi!, login through you vitbhopal gmail account
-    <div class="g-signin2"></div>
+    hi!, login with your vitbhopal gmail account 
+    <div class="g-signin2" style="position: absolute  ;top:50%; left: 40%;" data-onsucces="onSignIn"></div>
+    <div id='userDetails'><div id="userImg"></div>
+    <button id="signOut" onclick="signOut()"></button>
+<script>
+function onSignIn(googleuser)
+{    let getBasicProfile= googleuser.getBasicProfile()
+    console.log('welcome' + JSON.stringify(getBasicProfile))
+    document.querySelector('#userDetails').innerText = getBasicProfile.getNAme()
+    var userImg = document.querySelector('#userImg').createElement('img')
+    userImg.setAttribute('src' , getBasicProfile.getImageUrl())
+
+    function signOut()
+    {
+        gapi.auth2.getAuthInstance().signOut().then(function() {
+            console.log('you are signed out')
+        })
+    }
+}
+</script>
 </body>
 </html>
