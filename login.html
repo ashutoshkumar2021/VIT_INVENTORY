@@ -41,6 +41,8 @@ function onSignIn(googleUser)
     var userImg = document.createElement('img')
     userImg.setAttribute('src' , getBasicProfile.getImageUrl())}
     userDetails.append('img')
+    let signOutbtn = document.querySelector('#btnSignOut')
+    signOutbtn.innerHTML.bold()
 
 
     function signOut()
