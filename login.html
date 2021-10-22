@@ -103,7 +103,7 @@ function onSignIn(googleUser)
         gapi.auth2.getAuthInstance().signOut().then(function() {
             console.log('you are signed out')
             userName.textContent= 'you are signed out'
-            imgsrc.src = 'none'
+            imgsrc.src = 'favicon.jpg'
         })
     }
 
