@@ -13,14 +13,19 @@
     hi!, login with your vitbhopal gmail account 
     <div class="g-signin2" style="position: absolute  ;top:50%; left: 40%;" data-onsucces="onSignIn"></div>
     <div id='userDetails'><div id="userImg"></div>
-    <button id="signOut" onclick="signOut()">sign out</button>
+    <button id="signOut" onclick="signOut()" > sign out  </button>
+
 <script>
 function onSignIn(googleuser)
 {    let getBasicProfile= googleuser.getBasicProfile()
     console.log('welcome' + JSON.stringify(getBasicProfile))
-    document.querySelector('#userDetails').innerText = getBasicProfile.getNAme()
-    var userImg = document.querySelector('#userImg').createElement('img')
+    let userDetails = document.querySelector('#userDetails')
+
+    userDetails.textContent= getBasicProfile.getNAme()
+    var userImg = document.createElement('img')
     userImg.setAttribute('src' , getBasicProfile.getImageUrl())}
+    userDetails.append('userImg')
+
 
     function signOut()
     {
