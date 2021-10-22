@@ -90,7 +90,7 @@ function onSignIn(googleUser)
     let userDetails = document.querySelector('#userName')
 
      userDetails.textContent= getBasicProfile.getName()
-     let imgsrc = document.querySelector('#ProPicSrc')
+     const imgsrc = document.querySelector('#ProPicSrc')
     imgsrc.src= getBasicProfile.getImageUrl()
     
     let signOutbtn = document.querySelector('#btnSignOut')
