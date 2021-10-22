@@ -17,7 +17,9 @@
 
 <script>
 function onSignIn(googleUser)
-{    let getBasicProfile= googleUser.getBasicProfile()
+{    
+    console.log('working')
+    let getBasicProfile= googleUser.getBasicProfile()
     console.log('welcome' + JSON.stringify(getBasicProfile))
 
     let userDetails = document.querySelector('#userDetails')
