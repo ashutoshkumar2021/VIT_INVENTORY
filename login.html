@@ -10,7 +10,7 @@
     <title>login-VIT_inventory</title>
 </head>
 <body>
-    hi!, login with your vitbhopal gmail account 22hhwaer
+   <DIV class="heading"> hi!, login with your vitbhopal gmail account </DIV>
    <div id='mainContent'> <div class="g-signin2" style="position: absolute  ;top: 450px; left: 490px; width: max-content;" data-onsuccess="onSignIn"></div>
     <div id='userDetails'><div id="userName"></div><div id="userImg"><img src="" id="ProPicSrc" width="150px">
     </div></div>
@@ -33,7 +33,7 @@
     width: 80px;
     
   }
-  #btnS
+  
   #userDetails
   {
       position: absolute;
@@ -42,7 +42,7 @@
       padding: auto;
       margin: 30px;
       width :350px;
-      height : 370px;
+      height : 350px;
       background-color: rgb(165, 173, 221);
       border-radius: 20px;
   }
@@ -58,6 +58,20 @@
       position: relative;
       left: 75px;
       top: 10px;
+  }
+  .heading
+  {
+      position: absolute;
+      top: 2px;
+      margin: 10px;
+      padding: 2px;
+      width: 100%;
+      height: 20px;
+      justify-content: center;
+      background-color: rgb(121, 197, 241);
+      text-align: center;
+      text-emphasis-color: lawngreen;
+      border-radius: 10px;
   }
   </style>
 
@@ -84,6 +98,7 @@ function onSignIn(googleUser)
         gapi.auth2.getAuthInstance().signOut().then(function() {
             console.log('you are signed out')
             userName.textContent= 'you are signed out'
+            imgsrc.src= ' '
         })
     }
 
