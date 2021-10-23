@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="cgpa.js">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -34,20 +35,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo">
                     <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                      </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">GPA CALCULATOR</a>
+                            <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">CGPA ESTIMATOR</a>
+                            <a class="nav-link" href="cgpaestimate.html">CGPA ESTIMATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">ATTENDANCE CALCULATOR</a>
+                            <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">VITB CLUBS</a>
+                            <a class="nav-link" href="vitbclubs.html">VITB CLUBS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">CODING RESOURCES</a>
+                            <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
                         </li>
 
                     </ul>
@@ -71,58 +75,64 @@
             </div>
         </div>
     </section>
-
-   
+    <div class="calcgpa">
+    <center> <h2 class="points" > CGPA Calculator</h2></center>
+    </div>
     <section id="form">
-        <div class="row course-division">
-            <h5 class="semester-heading-1"> Semester-1 </h5>
+      <center>
+      <div class="course-division">
+        <br>
+      <div class="row">
+
+      <div class="col align-self-start course-div-parts">
+     <h6>Credits</h6>
+     <input type="number" id="sem1c" name="c3" value="" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="max-50">
     
-          <div class="col align-self-start course-div-parts">
-         <h6>Credits</h6>
-         <input type="number" id="sem1c" name="c1" value="" min="1" max="" >
-        </div>
-            
-    
-    
-          <div class="col align-self-center course-div-parts semester-heading-2">
-            <h5> Semester-1 </h5>
-          </div> 
-    
-          
-          <div class="col align-self-end course-div-parts">
-            <h6>GPA</h6>
-            <input type="number" id="sem1g" name="g1" value="" min="0" max="10">
-    
-          </div>
-    
-          </div>
+      </div>
+        
+
+
+      <div class="col align-self-center course-div-parts semester-heading-2">
+        <h5> Semester-1 </h5>
+      </div> 
+
+      
+      <div class="col align-self-end course-div-parts">
+        <h6>GPA</h6>
+        <input type="number" id="sem3g" name="g3" value="" min="0" max="10" placeholder="max-10" step="0.1">
+
+      </div>
+
+      </div>
+      </div>
           
     
     
     
           <!-- -----------------------------   course-2   ------------------------------------------ -->
-          <div class="course-division-dark-variant">
+          <div class="course-division">
             <br>
           <div class="row">
-            <h5 class="semester-heading-1"> Semester-2 </h5>
-    
+  
           <div class="col align-self-start course-div-parts">
-         <input type="number" id="sem2c" name="c2" value="" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="max-50">
+         <h6>Credits</h6>
+         <input type="number" id="sem2c" name="c3" value="" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="max-50">
         
           </div>
             
-    
-    
+  
+  
           <div class="col align-self-center course-div-parts semester-heading-2">
             <h5> Semester-2 </h5>
           </div> 
-    
+  
           
           <div class="col align-self-end course-div-parts">
-            <input type="number" id="sem2g" name="g2" value="" min="0" max="10" placeholder="max-10" step="0.1">
-    
+            <h6>GPA</h6>
+            <input type="number" id="sem3g" name="g3" value="" min="0" max="10" placeholder="max-10" step="0.1">
+  
           </div>
-    
+  
           </div>
           </div>
           
@@ -132,7 +142,6 @@
             <div class="course-division">
               <br>
             <div class="row">
-              <h5 class="semester-heading-1"> Semester-3 </h5>
     
             <div class="col align-self-start course-div-parts">
            <h6>Credits</h6>
@@ -163,7 +172,6 @@
             <div class="course-division-dark-variant">
               <br>
             <div class="row">
-              <h5 class="semester-heading-1"> Semester-4 </h5>
     
             <div class="col align-self-start course-div-parts">
            <h6>Credits</h6>
@@ -197,8 +205,7 @@
             <div class="course-division">
               <br>
             <div class="row">
-              <h5 class="semester-heading-1"> Semester-5 </h5>
-    
+              
             <div class="col align-self-start course-div-parts">
            <h6>Credits</h6>
            <input type="number" id="sem5c" name="c5" value="" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="max-50">
@@ -226,7 +233,7 @@
             <div class="course-division-dark-variant">
               <br>
             <div class="row">
-              <h5 class="semester-heading-1"> Semester-6 </h5>
+              
     
             <div class="col align-self-start course-div-parts">
            <h6>Credits</h6>
@@ -257,7 +264,6 @@
             <div class="course-division">
               <br>
             <div class="row">
-              <h5 class="semester-heading-1"> Semester-7 </h5>
     
             <div class="col align-self-start course-div-parts">
            <h6>Credits</h6>
@@ -288,9 +294,7 @@
             <!-- -----------------------   course-8   ------------------------------------------ -->
             <div class="course-division-dark-variant">
               <br>
-            <div class="row">
-              <h5 class="semester-heading-1"> Semester-8 </h5>
-    
+            <div class="row">    
             <div class="col align-self-start course-div-parts">
            <h6>Credits</h6>
            <input type="number" id="sem8c" name="c8" value="" min="1" max="50" step="1" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="max-50">
@@ -312,8 +316,13 @@
     
             </div>
             </div>
+            </center>
        </section>
-
+      
+       <!--submit button-->
+       <center>
+        <button type="submit" id="sub2" onclick="getvalue_cgpa()">Submit</button>
+       </center>
 
     <section id="footer">
         <div class="row">
