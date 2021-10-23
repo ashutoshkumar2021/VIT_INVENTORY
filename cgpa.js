@@ -38,7 +38,7 @@ function gradeCalc(grade, unit) {
     </form>
     `;
     addNew.innerHTML = course_name;
-    document.getElementById("course-wrapper").appendChild(addNew);
+    document.getElementById("courses").appendChild(addNew);
     counter++;
   }
   
@@ -93,3 +93,6 @@ function gradeCalc(grade, unit) {
     }
     
   }
+  
+  
+  
