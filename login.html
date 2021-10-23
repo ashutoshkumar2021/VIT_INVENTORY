@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="939505258478-9mdiuh37veisgnfpdav6esltge7tcmk5.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>login-VIT_inventory</title>
+</head>
+<body>
+   <DIV class="heading"> hi!, login with your vitbhopal gmail account </DIV>
+   <div id='mainContent'> <div class="g-signin2" style="position: absolute  ;top: 450px; left: 490px; width: max-content;" data-onsuccess="onSignIn"></div>
+    <div id='userDetails'><div id="userName"></div><div id="userImg"><img src="" id="ProPicSrc" width="150px">
+    </div></div>
+   <div id="btnSignOut" onclick="signOut()" > sign out  </div>
+   </div>
+   <div id="btnHome"  onclick="window.open('index.html')"> homepage</div>
+   <style>
+   #btnSignOut {
+    background-color: #acd3f3; 
+    border: none;
+    border-radius: 20px;
+    color: rgb(77, 81, 83);
+    padding: 5px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 450px;
+    left :710px;
+    height:30px;
+    width: 80px;
+    
+  }
+  #btnHome
+  {
+    background-color: #acd3f3; 
+    border: none;
+    border-radius: 20px;
+    color: rgb(77, 81, 83);
+    padding: 5px ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 490px;
+    left :600px;
+    height:30px;
+    width: 80px;
+  }
+  #btnHome:hover
+  {
+      cursor: pointer;
+  }
+  #btnSignOut:hover
+  {
+      cursor: pointer;
+      box-shadow: rgb(53, 54, 54);
+  }
+  #userDetails
+  {
+      position: absolute;
+      top: 30px;
+      left :450px;
+      padding: auto;
+      margin: 30px;
+      width :350px;
+      height : 350px;
+      background-color: rgb(165, 173, 221);
+      border-radius: 20px;
+  }
+  #userName
+  {
+      position: relative;
+      top: 55%;
+      left: 10px;
+      font-size: 20px;
+  }
+  #userImg
+  {
+      position: relative;
+      left: 75px;
+      top: 10px;
+  }
+  .heading
+  {
+      position: absolute;
+      top: 2px;
+      margin: 10px;
+      padding: 2px;
+      width: 100%;
+      height: 20px;
+      justify-content: center;
+      background-color: rgb(121, 197, 241);
+      text-align: center;
+      text-emphasis-color: lawngreen;
+      border-radius: 10px;
+  }
+  </style>
+
+<script>
+function onSignIn(googleUser)
+{    
+    console.log('working')
+    let getBasicProfile= googleUser.getBasicProfile()
+    console.log('welcome' + JSON.stringify(getBasicProfile))
+
+    let userDetails = document.querySelector('#userName')
+
+     userDetails.textContent= getBasicProfile.getName()
+     let imgsrc = document.querySelector('#ProPicSrc')
+    imgsrc.src= getBasicProfile.getImageUrl()
+    
+    let signOutbtn = document.querySelector('#btnSignOut')
+    
+}
+
+
+    function signOut()
+    {
+        gapi.auth2.getAuthInstance().signOut().then(function() {
+            console.log('you are signed out')
+            userName.textContent= 'you are signed out'
+            let imgsrce = document.querySelector('#ProPicSrc')
+            imgsrce.src = 'favicon.jpg'
+        })
+    }
+
+
+</script>
+</body>
+</html>
