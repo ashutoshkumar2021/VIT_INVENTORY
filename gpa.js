@@ -23,7 +23,7 @@ function gradeCalc(grade, unit) {
     addNew.classList.add("add_new", `key-${counter}`);
     const course_name = `
     <form class="add_new key-${counter}">
-      <input type="text" placeholder="Course Code" class="courses key-${counter}" required>
+      <input type="text" placeholder="Course" class="courses key-${counter}" required>
           <input type="number" placeholder="Credit Unit" class="credit-units key-${counter}" required>
           <select class="grade key-${counter}" required>
         <option value="select">Select</option>
@@ -45,17 +45,19 @@ function gradeCalc(grade, unit) {
   function removeCourse() {
     let mainForm = document.querySelector("form.add_new");
     mainForm.remove();
+    counter--
   }
   
   const reports = [];
   
-  /**
-   * @description calculates gpa
-   */
+
   function calcgpa() {
     const gpaPARAGRAPH = document.getElementById("gpa-calc");
     const GRADESSELECT = document.querySelectorAll("select.grade");
     const UNIT = document.querySelectorAll("input.credit-units");
+
+
+
   
     const courseReport = {};
   
@@ -64,6 +66,7 @@ function gradeCalc(grade, unit) {
     let totalUnits = 0;
   
     GRADESSELECT.forEach((e) => {
+      console.log(e)
       let GRADES = e.options;
       const selectedIndex = e.selectedIndex;
       const selectedGrade = GRADES[selectedIndex];
