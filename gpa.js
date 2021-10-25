@@ -50,10 +50,10 @@ function gradeCalc(grade, unit) {
   const reports = [];
   
   /**
-   * @description calculates cgpa
+   * @description calculates gpa
    */
-  function calcCgpa() {
-    const CGPAPARAGRAPH = document.getElementById("cgpa-calc");
+  function calcgpa() {
+    const gpaPARAGRAPH = document.getElementById("gpa-calc");
     const GRADESSELECT = document.querySelectorAll("select.grade");
     const UNIT = document.querySelectorAll("input.credit-units");
   
@@ -87,9 +87,9 @@ function gradeCalc(grade, unit) {
     const gpa = totalEarnedUnits / totalUnits;
     
     if (gpa >= 0){
-      CGPAPARAGRAPH.textContent = "Your CGPA is " + gpa.toFixed(2);   
+      gpaPARAGRAPH.textContent = "Your gpa is " + gpa.toFixed(2);   
     } else {
-      CGPAPARAGRAPH.textContent = "Please enter your correct grade and credit units";    
+      gpaPARAGRAPH.textContent = "Please enter your correct grade and credit units";    
     }
     
   }
