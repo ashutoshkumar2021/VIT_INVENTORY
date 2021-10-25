@@ -18,8 +18,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
         rel="stylesheet">
+    
+
 </head>
-</head>
+
 
 <body>
     <section id="title">
@@ -27,27 +29,33 @@
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <i class="fas fa-graduation-cap fa-5x"></i>
-                <a class="navbar-brand" href="">VIT-Inventory</a>
+                <a class="navbar-brand" href="index.html">VIT-Inventory</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo">
                     <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                      </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">GPA CALCULATOR</a>
+                            <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">CGPA CALCULATOR</a>
+                            <a class="nav-link" href="cgpaestimate.html">CGPA ESTIMATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">CGPA ESTIMATOR</a>
+                            <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">VITB CLUBS</a>
+                            <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">CODING RESOURCES</a>
+                            <a class="nav-link" href="vitbclubs.html">VITB CLUBS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
                         </li>
 
                     </ul>
@@ -70,6 +78,46 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id ='content'>
+        <h2>ATTENDANCE CALCULATOR </h2>
+        <form name="form1">
+            <b>Total Classes in semster:</b><INPUT type="textbox" name="value1"></br>
+            <b>Number of classes Missed:</b><INPUT type="textbox" name="value2"><br>
+            
+            <INPUT type="button" value="Predict" onclick='Calculate()'>
+        </form>
+        <script language="Javascript">
+            var a;
+            var b;
+            var attendance;
+            var left 
+            var percentage;
+        
+            function Calculate()
+            {
+                a=parseInt(form1.value1.value);
+                console.log(a);
+                b=parseInt(form1.value2.value);
+                attendance=0.25*a;
+                console.log(attendance);
+                attendance=Math.round(attendance);
+                console.log(attendance);
+                left=attendance-b;
+                console.log(left);
+                percentage=((a-b)/a)*100;
+                if(percentage>75)
+                {
+                    alert("The Number of classes that can be missed"+"="+left)
+                }
+                else{
+                    alert("Warning!!! Name will occuur in Debar list");
+                }
+        
+               // document.write("The number of classes that can be missed "+"<b>"+left +"<b>"+"</br>");
+            }
+        
+        </script>
     </section>
     <section id="footer">
         <div class="row">
