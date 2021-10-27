@@ -258,6 +258,7 @@ select{
                 type="number"
                 class="credit-units key-0"
                 placeholder="Credit Units"
+                id="inputt"
                 value=""
                 required
               />
@@ -278,14 +279,22 @@ select{
         <div class="btns">
           <button class="buttonn" onclick="addCourse()">+ Add Course</button>
           <button class="buttonn" onclick="removeCourse()">- Remove Course</button>
-          <button class="buttonn" onclick="calcgpa()">Calculate GPA</button>
+          <button class="buttonn" onclick="calcgpa(); yo();" >Calculate GPA</button>
         </div>
         <div class="lastp">
           <p id="gpa-calc">Your gpa is:</p>
         </div>
         
       </div>
-    
+    <script>
+      function yo()
+      {
+        console.log('this is it')
+      const inp = document.getElementById("#inputt")
+
+      console.log(inp)
+      }
+    </script>
       
 </section>
     <section id="footer">
