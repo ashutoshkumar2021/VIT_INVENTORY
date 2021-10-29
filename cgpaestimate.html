@@ -18,6 +18,162 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
         rel="stylesheet">
+
+    <style>
+        body {
+            background-image: linear-gradient(90deg, #1778f2, #BBC2C8);
+            color: white;
+        }
+
+        #semester-row {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: -2%;
+        }
+
+        #credit-row {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 13%;
+        }
+
+        #GPA-row {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 11%;
+        }
+
+        .calculator-box {
+            width: 50%;
+            height: auto;
+            border: 2px solid #3D515C;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+
+
+        @media screen and (max-width: 1200px) {
+            .calculator-box {
+                width: 70%;
+            }
+        }
+
+
+        @media screen and (max-width: 950px) {
+            .calculator-box {
+                width: 75%;
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .calculator-box {
+                width: 90%;
+            }
+        }
+
+
+        .head_cgpaest {
+            padding: 15px;
+            font-size: 40px;
+            text-align: center;
+            border: 1px solid #3D515C;
+            background-color: #3D515C;
+        }
+
+        .head_cgpaest:hover {
+            padding: 15px;
+            font-size: 40px;
+            text-align: center;
+            border: 1px solid #3D515C;
+            background-color: #1778f2;
+            color: #000;
+        }
+
+        #mainp {
+            padding: 20px;
+            font-size: 1rem;
+            color: black;
+            text-align: center;
+        }
+
+        #courses,
+        form {
+            color: black;
+            padding-left: 10px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        input {
+            border: none;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 20%;
+            text-align: center;
+        }
+
+        select {
+            padding: 15px;
+            border: none;
+            border-radius: 7.5px;
+            width: 20%;
+
+        }
+
+        .buttonn {
+            width: max-content;
+            height: 40px;
+            padding: 1px;
+            margin: 5px auto;
+            /*   margin-left: 10px; */
+            border-width: 3px;
+            border-radius: 10%;
+            border-style: solid;
+            max-width: max-content;
+        }
+
+        .buttonn:hover {
+            width: max-content;
+            height: 40px;
+            padding: 1px;
+            margin: 5px auto;
+            border-width: 3px;
+            border-radius: 10%;
+            border-style: solid;
+            color: #fff;
+            background: #000;
+            border-color: #000;
+        }
+
+        .btns {
+            width: 100%;
+            padding: 10px;
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lastp {
+            border: 1px solid #3D515C;
+            background-color: #3D515C;
+        }
+
+        .lastp p {
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        .lastp p:hover {
+            background-color: #1778f2;
+            color: #000;
+        }
+    </style>
 </head>
 </head>
 
@@ -71,6 +227,86 @@
             </div>
         </div>
     </section>
+    <section id="cgpaest_form">
+
+
+        <div class="calculator-box">
+            <h1 class="head_cgpaest">CGPA Estimator calculator</h1>
+            <p id="mainp">
+                This CGPA Estimator Calculator is based on the VIT grading
+                system.
+            </p>
+
+
+            <form name="form1" class="key-0 ">
+                <div>
+                    <h6>Desired CGPA</h6>
+                    <input type="textbox" name="desired" required />
+                </div>
+                <div>
+                    <h6>Current CGPA</h6>
+                    <input type="textbox" name="current" required />
+                </div>
+                <div>
+                    <h6>Total no. of credits completed</h6>
+                    <input type="textbox" name="crecomp" required />
+                </div>
+                <div>
+                    <h6>No. of credits taken now</h6>
+                    <input type="textbox" name="crenow" required />
+                </div>
+            </form>
+            <button class="button" onclick="calculate()">Calculate</button>
+            <div id='result'></div>
+            <div class="lastp">
+                <p id="cgpa-calc">You should aim in this semester:</p>
+            </div>
+
+
+        </div>
+        <script language="JavaScript">
+            var crecomp;
+            var current;
+            var crenow;
+            var desired;
+            var sumcre;
+            var mulcomp;
+            var semifinal;
+            var final;
+            var superfinal;
+
+            function calculate() {
+                crecomp = parseFloat(form1.crecomp.value);
+                console.log(crecomp);
+                //alert(crecomp);
+                current = parseFloat(form1.current.value);
+                console.log(current);
+                //alert(current);
+                crenow = parseFloat(form1.crenow.value);
+                console.log(crenow);
+                //alert(crenow);
+                desired = parseFloat(form1.desired.value);
+                console.log(desired);
+                //alert(desired);
+                sumcre = crecomp + crenow;
+                console.log(sumcre);
+                //alert(sumcre);
+                mulcomp = crecomp * current;
+                console.log(mulcomp);
+                semifinal = desired * sumcre;
+                console.log(semifinal);
+                final = semifinal - mulcomp;
+                console.log(final);
+                //alert(final);
+                superfinal = final / crenow;
+                alert("you should aim "+superfinal.toFixed(2)+" GPA. Best of Luck!");
+
+            }
+          
+
+        </script>
+
+    </section>
     <section id="footer">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -82,6 +318,6 @@
         </div>
         </div>
     </section>
-    </body>
-    
-    </html>    
+</body>
+
+</html>
