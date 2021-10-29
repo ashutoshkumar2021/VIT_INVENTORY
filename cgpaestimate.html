@@ -182,35 +182,36 @@
 <body>
     <section id="title">
         <div class="container-fluid">
-
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <i class="fas fa-graduation-cap fa-5x"></i>
-                <a class="navbar-brand" href="">VIT-Inventory</a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="">GPA CALCULATOR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">CGPA CALCULATOR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">ATTENDANCE CALCULATOR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">VITB CLUBS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">CODING RESOURCES</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </nav>
+    
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <i class="fas fa-graduation-cap fa-5x"></i>
+            <a class="navbar-brand" href="">VIT-Inventory</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">VITB CLUBS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">CODING RESOURCES</a>
+                </li>
+    
+              </ul>
+            </div>
+          </nav>
+    
 
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
@@ -283,7 +284,7 @@
             <button class="button" onclick="calculate()">Calculate</button>
             <div id='result'></div>
             <div class="lastp" id="last_p">
-                <p id="cgpa-final">You should aim in this semester:</p>
+                <p id="cgpa-final">Required CGPA in this semester:</p>
                 <div id="extrabtn"></div>
             </div>
         </div>
@@ -309,6 +310,8 @@
                 }
 
             function calculate() {
+                
+              
                 crecomp = parseFloat(form1.crecomp.value);
                 console.log(crecomp);
                 //alert(crecomp);
@@ -334,7 +337,13 @@
                 superfinal = final / crenow;
                 superfinal = superfinal ? superfinal : 0 ;
                 if (superfinal <= 10  && superfinal >0){
-                    final_p.textContent = "you should aim "+superfinal.toFixed(2)+" GPA. Best of Luck!  ";   
+                    final_p.textContent = "you should aim for "+superfinal.toFixed(2)+" GPA. Best of Luck!  ";  
+                    let alert = document.getElementById('alert')
+        alert.innerHTML = `<div class="alert alert-info" role="alert">
+              The Desired CGPA can be obtained in this semester
+              </div>` 
+              let remExtraBtn = document.getElementById('extrabtn')
+              remExtraBtn.remove()
     } 
     else if (superfinal === 0) {
         final_p.textContent ="Enter correct values";
@@ -346,7 +355,7 @@
         let extra_btn = document.getElementById('extrabtn')  
         extra_btn.innerHTML = '<button class="button" onclick="multisem()">multi Sem</button>'
         let alert = document.getElementById('alert')
-        alert.innerHTML = `<div class="alert alert-info" role="alert">
+        alert.innerHTML = `<div class="alert alert-warning" role="alert">
               The Desired cgpa cannot be achieved in this semester
               </div>`
     }
