@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
     rel="stylesheet">
-  
+
 
 
 
@@ -232,58 +232,43 @@
   </section>
 
   <section id="cgpa_form">
-    
-       
+
+
     <div class="calculator-box">
-     <h1 class="head_cgpa">CGPA CALCULATOR</h1>
-     <p id="mainp">
-       This CGPA Calculator is based on the VIT grading
-       system.
-     </p>
+      <h1 class="head_cgpa">CGPA CALCULATOR</h1>
+      <p id="mainp">
+        This CGPA Calculator is based on the VIT grading
+        system.
+      </p>
 
-     <div id="semesters">
-      <form class="key-0 ">
-        <p> <label id="semester-row" for="semester">Semester:</label> 
-         <label id="credit-row" for="credit-units">Credit Units:</label>
-       <label id="GPA-row" for="GPA">GPA: </label></p>
-          <input 
-            type="number"
-            placeholder="Semester-num"
-            class="semester key-0"
-            required/>
+      <div id="semesters">
+        <form class="key-0 ">
+          <p> <label id="semester-row" for="semester">Semester:</label>
+            <label id="credit-row" for="credit-units">Credit Units:</label>
+            <label id="GPA-row" for="GPA">GPA: </label>
+          </p>
+          <input type="number" placeholder="Semester-num" class="semester key-0" required />
 
-          <input 
-            type="number"
-            class="credit-units key-0"
-            placeholder="Credit Units"
-            value=""
-            required
-          />
+          <input type="number" class="credit-units key-0" placeholder="Credit Units" value="" required />
 
-          <input 
-          type="number"
-          class="GPA-units key-0"
-          placeholder="GPA Units"
-          step="0.01"
-          value=""
-          required
-        />
+          <input type="number" class="GPA-units key-0" placeholder="GPA Units" step="0.01" value="" required />
+        </form>
+      </div>
+
       </form>
+    
+
+    <div class="btns">
+      <button class="buttonn" onclick="addSemester()">+ Add Semester</button>
+      <button class="buttonn" onclick="removeSemester()">- Remove Semester</button>
+      <button class="buttonn" onclick="calcCgpa()">Calculate CGPA</button>
     </div>
-           
-       </form>
-     </div>
-     <!-- <section class"btn">+ Add Course</section> -->
-     <div class="btns">
-       <button class="buttonn" onclick="addSemester()">+ Add Semester</button>
-       <button class="buttonn" onclick="removeSemester()">- Remove Semester</button>
-       <button class="buttonn" onclick="calcCgpa()">Calculate CGPA</button>
-     </div>
-     <div class="lastp">
-       <p id="cgpa-calc">Your CGPA is:</p>
-     </div>
-   </div>
-  
+    <div class="lastp">
+      <p id="cgpa-calc">Your CGPA is:</p>
+    </div>
+    </div>
+
+
 
 
   </section>
