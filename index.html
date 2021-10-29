@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -30,130 +31,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
         rel="stylesheet">
     <style>
-        .ho:hover {
-            text-shadow: none;
-            box-sizing: border-box;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1);
-            z-index: 2;
-
-        }
-
-        .coho:hover {
-            background-color: #1778f2;
-        }
-
-        #explore {
-            background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-            background-size: cover;
-        }
-
-        #gpacal {
-            background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-            background-size: cover;
-        }
-
-        #cgpacal {
-            background-image: url("https://images.unsplash.com/flagged/photo-1578928534298-9747fc52ec97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
-            background-size: cover;
-        }
-
-        #attendancecal {
-            background-image: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-            background-size: cover;
-        }
-
-        #mapvitb {
-            background-image: url("https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80");
-            background-size: cover;
-        }
-
-        #elib {
-            background-image: url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-            background-size: cover;
-        }
-
-        #coderesource {
-            background-image: url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
-            background-size: cover;
-        }
-
-        #doubtsupport {
-            background-image: url("https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-            background-size: cover;
-        }
-
-        #vitbclubs {
-            background-image: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
-            background-size: cover;
-        }
-
-
-        .segmentcards {
-
-            padding: 10rem 0 0;
-
-            border-radius: 0.5rem;
-            overflow: hidden;
-            transition: transform 500ms ease;
-        }
-
-        .segmentcards:hover,
-         .segmentcards:focus-within {
-            transform: scale(1.05);
-        }
-
-        .segmentcards:hover .points::after {
-            transform: scaleX(1);
-        }
-
-        .content {
-            padding: 1.5em;
-            background: hsl(213 89% 50% /.4);
-            
-          
-        }
-        @media(hover)
-        {   .content{
-            transform: translateY(95%);
-            transition: transform 500ms ease;
-              
-                    }
-         .points::after
-         {
-            transform: scaleX(0);
-         } 
-         .segmentcards:hover .content,
-        .segmentcards:focus-within .content {
-            transform: translateY(0);
-        }
-        }
-
        
-        
+.ho:hover {
+    text-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    z-index: 2;
 
-        .points {
-            position: relative;
-            width: max-content;
-            font-size: 155%;
-        }
+}
 
-        .points::after {
-            content: "";
-            height: 4px;
-            position: absolute;
-            left: 0px;
-            bottom: 0;
-            width: 100%;
-            background: greenyellow;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 500ms ease;
-            transition-delay: 700ms;
-        }
+.coho:hover {
+    background-color: #1778f2;
+}
+
+#explore {
+    background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+#gpacal {
+    background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+#cgpacal {
+    background-image: url("https://images.unsplash.com/flagged/photo-1578928534298-9747fc52ec97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+}
+
+#attendancecal {
+    background-image: url("https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+#mapvitb {
+    background-image: url("https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=873&q=80");
+    background-size: cover;
+}
+
+#elib {
+    background-image: url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+#coderesource {
+    background-image: url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+}
+
+#doubtsupport {
+    background-image: url("https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+#vitbclubs {
+    background-image: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+
+.segmentcards {
+
+    padding: 10rem 0 0;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.segmentcards:hover,
+ .segmentcards:focus-within {
+    transform: scale(1.05);
+}
+
+.segmentcards:hover .points::after {
+    transform: scaleX(1);
+}
+
+.content {
+    padding: 1.5em;
+    background: hsl(213 89% 50% /.4);
+    
+  
+}
+@media(hover)
+{   .content{
+    transform: translateY(95%);
+    transition: transform 500ms ease;
+      
+            }
+ .points::after
+ {
+    transform: scaleX(0);
+ } 
+ .segmentcards:hover .content,
+.segmentcards:focus-within .content {
+    transform: translateY(0);
+}
+}
+
+
+
+
+.points {
+    position: relative;
+    width: max-content;
+    font-size: 155%;
+}
+
+.points::after {
+    content: "";
+    height: 4px;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    background: greenyellow;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+    transition-delay: 700ms;
+}
+
     </style>
 </head>
 
@@ -224,7 +227,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <section id="pricing">
+    <section id="feature_tools">
 
 
         <center>
@@ -233,7 +236,7 @@
             
         </center>
         <center>
-            <p>Easy to use and do whatever you want to do.</p>
+            <p>Easy to use .At your disposal.</p>
         </center>
         <div class="row">
 
