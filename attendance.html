@@ -18,8 +18,164 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
         rel="stylesheet">
-    
 
+        <style>
+            body {
+                background-image: linear-gradient(90deg, #1778f2, #BBC2C8);
+                color: white;
+            }
+    
+            #semester-row {
+                font-size: 20px;
+                font-weight: bolder;
+                margin-left: -2%;
+            }
+    
+            #credit-row {
+                font-size: 20px;
+                font-weight: bolder;
+                margin-left: 13%;
+            }
+    
+            #GPA-row {
+                font-size: 20px;
+                font-weight: bolder;
+                margin-left: 11%;
+            }
+    
+            .calculator-box {
+                width: 50%;
+                height: auto;
+                border: 2px solid #3D515C;
+                margin: 100px auto;
+                text-align: center;
+            }
+    
+    
+    
+            @media screen and (max-width: 1200px) {
+                .calculator-box {
+                    width: 70%;
+                }
+            }
+    
+    
+            @media screen and (max-width: 950px) {
+                .calculator-box {
+                    width: 75%;
+                }
+            }
+    
+    
+            @media screen and (max-width: 600px) {
+                .calculator-box {
+                    width: 90%;
+                }
+            }
+    
+    
+            .attendance {
+                padding: 15px;
+                font-size: 40px;
+                text-align: center;
+                border: 1px solid #3D515C;
+                background-color: #3D515C;
+            }
+    
+            .attendance:hover {
+                padding: 15px;
+                font-size: 40px;
+                text-align: center;
+                border: 1px solid #3D515C;
+                background-color: #1778f2;
+                color: #000;
+            }
+    
+            #mainp {
+                padding: 20px;
+                font-size: 1rem;
+                color: black;
+                text-align: center;
+            }
+    
+            #courses,
+            form {
+                color: black;
+                padding-left: 10px;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            input {
+                border: none;
+                padding: 15px;
+                margin: 10px;
+                border-radius: 5px;
+                width: 20%;
+                text-align: center;
+            }
+    
+            select {
+                padding: 15px;
+                border: none;
+                border-radius: 7.5px;
+                width: 20%;
+    
+            }
+    
+            button {
+                width: max-content;
+                height: 40px;
+                padding: 1px;
+                margin: 5px auto;
+                /*   margin-left: 10px; */
+                border-width: 3px;
+                border-radius: 10%;
+                border-style: solid;
+                max-width: max-content;
+                background-color:#1778f2 ;
+            }
+    
+            button:hover {
+                width: max-content;
+                height: 40px;
+                padding: 1px;
+                margin: 5px auto;
+                border-width: 3px;
+                border-radius: 10%;
+                border-style: solid;
+                color: #fff;
+                background: #000;
+                border-color: #000;
+            }
+    
+            .btns {
+                width: 100%;
+                padding: 10px;
+                display: inline-block;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            .lastp {
+                border: 1px solid #3D515C;
+                background-color: #3D515C;
+            }
+    
+            .lastp p {
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-size: 30px;
+                font-weight: bolder;
+            }
+    
+            .lastp p:hover {
+                background-color: #1778f2;
+                color: #000;
+            }
+        </style>    
+ main
 </head>
 
 
@@ -27,34 +183,30 @@
     <section id="title">
         <div class="container-fluid">
 
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <i class="fas fa-graduation-cap fa-5x"></i>
-                <a class="navbar-brand" href="index.html">VIT-Inventory</a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
-                      </li>
+             <nav class="navbar navbar-expand-lg navbar-light">
+              <i class="fas fa-graduation-cap fa-5x"></i>
+              <a class="navbar-brand" href="">VIT-Inventory</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+            <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cgpaestimate.html">CGPA ESTIMATOR</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="vitbclubs.html">VITB CLUBS</a>
+                            <a class="nav-link" href="cgpaestimate.html">CGPA ESTIMATOR</a>
                         </li>
                         <li class="nav-item">
+
                             <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
                         </li>
 
@@ -79,14 +231,23 @@
             </div>
         </div>
     </section>
-    <section id ='content'>
-        <h2>ATTENDANCE CALCULATOR </h2>
+
+    <section id="attendance">
+        <div class="calculator-box">
+            <h1 class="attendance">Attendance Calculator</h1>
+            <p id="mainp">
+                This Attendance Calculator is based on the VIT 75% attendance rule.
+            </p>
+
         <form name="form1">
             <b>Total Classes in semster:</b><INPUT type="textbox" name="value1"></br>
             <b>Number of classes Missed:</b><INPUT type="textbox" name="value2"><br>
             
             <INPUT type="button" value="Predict" onclick='Calculate()'>
         </form>
+
+        </div>
+
         <script language="Javascript">
             var a;
             var b;
@@ -116,7 +277,7 @@
         
                // document.write("The number of classes that can be missed "+"<b>"+left +"<b>"+"</br>");
             }
-        
+
         </script>
     </section>
     <section id="footer">

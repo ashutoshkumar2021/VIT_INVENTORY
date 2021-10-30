@@ -1,182 +1,182 @@
+
 <!doctype html>
 <html lang="en">
 
 <head>
-  <link rel="icon" href="favicon.jpg" type="image/x-icon">
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="script" href="gpa.js">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <title>VIT Inventory</title>
-  <!--Google Fonts-->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
-    rel="stylesheet">
 
 
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="cgpa.js">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <style>
-    body {
-      background-image: linear-gradient(90deg, #1778f2, #BBC2C8);
-      color: white;
-    }
+    <title>VIT Inventory</title>
+    <!--Google Fonts-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+        
+   
 
-    #course-row {
-      font-size: 20px;
-      font-weight: bolder;
-      margin-left: -2%;
-    }
+<style>
+body {
+  background-image: linear-gradient(90deg, #1778f2 ,#BBC2C8);
+  color: white;
+}
 
-    #credit-row {
-      font-size: 20px;
-      font-weight: bolder;
-      margin-left: 13%;
-    }
+#course-row {
+  font-size: 20px;
+  font-weight: bolder; 
+  margin-left: -2%;
+}
 
-    #grade-row {
-      font-size: 20px;
-      font-weight: bolder;
-      margin-left: 8%;
-    }
+#credit-row {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 13%;
+}
 
-    .calculator-box {
-      width: 50%;
-      height: auto;
-      border: 2px solid #3D515C;
-      margin: 100px auto;
-      text-align: center;
-    }
+#grade-row {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 8%;
+}
 
-
-
-    @media screen and (max-width: 1200px) {
-      .calculator-box {
-        width: 70%;
-      }
-    }
-
-
-    @media screen and (max-width: 950px) {
-      .calculator-box {
-        width: 75%;
-      }
-    }
-
-
-    @media screen and (max-width: 600px) {
-      .calculator-box {
-        width: 90%;
-      }
-    }
+.calculator-box {
+  width: 50%;
+  height: auto;
+  border: 2px solid #3D515C;
+  margin: 100px auto;
+ text-align: center;
+}
 
 
-    .head_gpa {
-      padding: 15px;
-      font-size: 40px;
-      text-align: center;
-      border: 1px solid #3D515C;
-      background-color: #3D515C;
-    }
 
-    .head_gpa:hover {
-      padding: 15px;
-      font-size: 40px;
-      text-align: center;
-      border: 1px solid #3D515C;
-      background-color: #1778f2;
-      color: #000;
-    }
+@media screen and (max-width: 1200px) {
+ .calculator-box {
+    width: 70%;
+  }
+}
 
-    #mainp {
-      padding: 20px;
-      font-size: 1rem;
-      color: black;
-      text-align: center;
-    }
 
-    #courses,
-    form {
-      color: black;
-      padding-left: 10px;
-      margin: 0 auto;
-      text-align: center;
-    }
+@media screen and (max-width: 950px) {
+ .calculator-box {
+    width: 75%;
+  }
+}
 
-    input {
-      border: none;
-      padding: 15px;
-      margin: 10px;
-      border-radius: 5px;
-      width: 20%;
-      text-align: center;
-    }
 
-    select {
-      padding: 15px;
-      border: none;
-      border-radius: 7.5px;
-      width: 20%;
+@media screen and (max-width: 600px) {
+ .calculator-box {
+    width: 90%;
+  }
+}
 
-    }
 
-    .buttonn {
-      width: max-content;
-      height: 40px;
-      padding: 1px;
-      margin: 5px auto;
-      /*   margin-left: 10px; */
-      border-width: 3px;
-      border-radius: 10%;
-      border-style: solid;
-      max-width: max-content;
-    }
+.head_cgpa{
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #3D515C;
+  background-color: #3D515C;
+}
 
-    .buttonn:hover {
-      width: max-content;
-      height: 40px;
-      padding: 1px;
-      margin: 5px auto;
-      border-width: 3px;
-      border-radius: 10%;
-      border-style: solid;
-      color: #fff;
-      background: #000;
-      border-color: #000;
-    }
+.head_cgpa:hover {
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #3D515C;
+  background-color: #1778f2;
+  color: #000;
+}
 
-    .btns {
-      width: 100%;
-      padding: 10px;
-      display: inline-block;
-      margin: 0 auto;
-      text-align: center;
-    }
+#mainp{
+  padding: 20px;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+}
+ 
+#courses, form {
+  color: black;
+  padding-left: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+input{
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
+}
+select{
+  padding: 15px;
+  border: none;
+  border-radius: 7.5px;
+  width: 20%;
 
-    .lastp {
-      border: 1px solid #3D515C;
-      background-color: #3D515C;
-    }
+}
+ .buttonn {
+  width: max-content;
+  height: 40px;
+  padding: 1px;
+  margin: 5px auto;
+/*   margin-left: 10px; */
+  border-width: 3px;
+  border-radius: 10%;
+  border-style: solid;
+  max-width: max-content;
+}
 
-    .lastp p {
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 30px;
-      font-weight: bolder;
-    }
+ .buttonn:hover {
+  width: max-content;
+  height: 40px;
+  padding: 1px;
+  margin: 5px auto;
+  border-width: 3px;
+  border-radius: 10%;
+  border-style: solid;
+  color: #fff;
+  background: #000;
+  border-color: #000;
+}
 
-    .lastp p:hover {
-      background-color: #1778f2;
-      color: #000;
-    }
-  </style>
+.btns {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+.lastp {
+  border: 1px solid #3D515C;
+  background-color: #3D515C;
+}
+.lastp p {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+} 
+
+.lastp p:hover {
+  background-color: #1778f2;
+  color: #000;
+} 
+
+
+        </style>
+
 </head>
 </head>
 
@@ -184,54 +184,122 @@
   <section id="title">
     <div class="container-fluid">
 
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <i class="fas fa-graduation-cap fa-5x"></i>
-        <a class="navbar-brand" href="index.html">VIT-Inventory</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cgpaestimate.html">CGPA ESTIMATOR</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="vitbclubs.html">VITB CLUBS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
-            </li>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <i class="fas fa-graduation-cap fa-5x"></i>
+            <a class="navbar-brand" href="">VIT-Inventory</a>
 
-          </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+                <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">CODING RESOURCES</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1>All Rounder Website for VITIANS!</h1>
+                <button type="button" class="btn btn-dark btn-lg download-button" style="margin-left: 20%;">
+                    <i class="fas fa-user-plus"></i> SIGN UP
+                </button>
+                <button type="button" class="btn btn-lg btn-outline-light download-button">
+                    <i class="fas fa-sign-in-alt"></i> LOGIN
+                </button>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="highlights-document-browser-iphone.png" alt="iphone-mockup"
+                    class="iphone-img rotate-25" />
+            </div>
         </div>
-      </nav>
+    </div>
+</section>
+    
+    <section id="cgpa_form">
+    
+       
+       <div class="calculator-box">
+        <h1 class="head_cgpa">GPA CALCULATOR</h1>
+        <p id="mainp">
+          This GPA Calculator is based on the VIT grading
+          system.
+        </p>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12">
-          <h1>All Rounder Website for VITIANS!</h1>
-          <button type="button" class="btn btn-dark btn-lg download-button" style="margin-left: 20%;">
-            <i class="fas fa-user-plus"></i> SIGN UP
-          </button>
-          <button type="button" class="btn btn-lg btn-outline-light download-button">
-            <i class="fas fa-sign-in-alt"></i> LOGIN
-          </button>
+        <div id="courses">
+          <form class="key-0 ">
+            <p> <label id="course-row" for="courses">Courses:</label> 
+             <label id="credit-row" for="credit-units">Credit Units:</label>
+           <label id="grade-row" for="grade">Grades: </label></p>
+              <input 
+                type="text"
+                placeholder="Course-Name"
+                class="courses key-0"
+                required/>
+
+              <input 
+                type="number"
+                class="credit-units key-0"
+                placeholder="Credit Units"
+                value=""
+                required
+              />
+
+              <select class="grade key-0 select" required>
+                <option class="grade" value="select">Select</option>
+                <option value="10">S</option>
+      <option value="9">A</option>
+      <option value="8">B</option>
+      <option value="7">C</option>
+      <option value="6">D</option>
+      <option value="5">E</option>
+      <option value="0">F</option>
+              </select>
+          </form>
+        </div>
+        <!-- <section class"btn">+ Add Course</section> -->
+        <div class="btns">
+          <button class="buttonn" onclick="addCourse()">+ Add Course</button>
+          <button class="buttonn" onclick="removeCourse()">- Remove Course</button>
+          <button class="buttonn" onclick="calcCgpa()">Calculate GPA</button>
+        </div>
+        <div class="lastp">
+          <p id="cgpa-calc">Your GPA is:</p>
+        </div>
+      </div>
+    
+      
+</section>
+    <section id="footer">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1>Join our Telegram Channel!<i class="fab fa-telegram-plane"></i></h1>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="ECS_15_CX-Careers_01-e1571300855316.png" alt="iphone-mockup" width="350" height="350">
+            </div>
+
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12">
           <img src="highlights-document-browser-iphone.png" alt="iphone-mockup" class="iphone-img rotate-25" />
         </div>
+
       </div>
     </div>
   </section>
@@ -301,6 +369,10 @@
     </div>
     <script src="gpa.js"></script>
   </section>
+
+        <script src="gpa.js"></script>
+    </section> 
+>
 </body>
 
 </html>
