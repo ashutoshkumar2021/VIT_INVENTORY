@@ -1,16 +1,13 @@
-
 <!doctype html>
 <html lang="en">
 
 <head>
-
-
     <link rel="icon" href="favicon.jpg" type="image/x-icon">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles.css">
-    <link rel="script" href="cgpa.js">
+    <link rel="script" href="gpa.js">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -80,7 +77,7 @@ body {
 }
 
 
-.head_cgpa{
+.head_gpa{
   padding: 15px;
   font-size: 40px;
   text-align: center;
@@ -88,7 +85,7 @@ body {
   background-color: #3D515C;
 }
 
-.head_cgpa:hover {
+.head_gpa:hover {
   padding: 15px;
   font-size: 40px;
   text-align: center;
@@ -176,7 +173,6 @@ select{
 
 
         </style>
-
 </head>
 </head>
 
@@ -184,30 +180,35 @@ select{
   <section id="title">
     <div class="container-fluid">
 
-
         <nav class="navbar navbar-expand-lg navbar-light">
             <i class="fas fa-graduation-cap fa-5x"></i>
-            <a class="navbar-brand" href="">VIT-Inventory</a>
+            <a class="navbar-brand" href="index.html">VIT-Inventory</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo">
                 <ul class="navbar-nav ml-auto">
-                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME</a>
+                  </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gpa.html">GPA CALCULATOR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
+                        <a class="nav-link" href="cgpaestimate.html">CGPA ESTIMATOR</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">CODING RESOURCES</a>
+                        <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vitbclubs.html">VITB CLUBS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
                     </li>
 
                 </ul>
@@ -232,24 +233,24 @@ select{
     </div>
 </section>
     
-    <section id="cgpa_form">
+    <section id="gpa_form">
     
        
        <div class="calculator-box">
-        <h1 class="head_cgpa">GPA CALCULATOR</h1>
+        <h1 class="head_gpa">GPA CALCULATOR</h1>
         <p id="mainp">
-          This GPA Calculator is based on the VIT grading
+          This gpa Calculator is based on the VIT grading
           system.
         </p>
 
         <div id="courses">
           <form class="key-0 ">
-            <p> <label id="course-row" for="courses">Courses:</label> 
+            <p> <label id="course-row" for="Course">Courses:</label> 
              <label id="credit-row" for="credit-units">Credit Units:</label>
            <label id="grade-row" for="grade">Grades: </label></p>
               <input 
                 type="text"
-                placeholder="Course-Name"
+                placeholder="Course"
                 class="courses key-0"
                 required/>
 
@@ -257,6 +258,7 @@ select{
                 type="number"
                 class="credit-units key-0"
                 placeholder="Credit Units"
+                id="inputt"
                 value=""
                 required
               />
@@ -264,26 +266,35 @@ select{
               <select class="grade key-0 select" required>
                 <option class="grade" value="select">Select</option>
                 <option value="10">S</option>
-      <option value="9">A</option>
-      <option value="8">B</option>
-      <option value="7">C</option>
-      <option value="6">D</option>
-      <option value="5">E</option>
-      <option value="0">F</option>
+                <option value="9">A</option>
+                <option value="8">B</option>
+                <option value="7">C</option>
+                <option value="6">D</option>
+                <option value="5">E</option>
+                <option value="0">F</option>
               </select>
           </form>
         </div>
-        <!-- <section class"btn">+ Add Course</section> -->
+        
         <div class="btns">
           <button class="buttonn" onclick="addCourse()">+ Add Course</button>
           <button class="buttonn" onclick="removeCourse()">- Remove Course</button>
-          <button class="buttonn" onclick="calcCgpa()">Calculate GPA</button>
+          <button class="buttonn" onclick="calcgpa(); yo();" >Calculate GPA</button>
         </div>
         <div class="lastp">
-          <p id="cgpa-calc">Your GPA is:</p>
+          <p id="gpa-calc">Your gpa is:</p>
         </div>
+        
       </div>
-    
+    <script>
+      function yo()
+      {
+        console.log('this is it')
+      const inp = document.getElementById("#inputt")
+
+      console.log(inp)
+      }
+    </script>
       
 </section>
     <section id="footer">
@@ -294,85 +305,10 @@ select{
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <img src="ECS_15_CX-Careers_01-e1571300855316.png" alt="iphone-mockup" width="350" height="350">
             </div>
-
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12">
-          <img src="highlights-document-browser-iphone.png" alt="iphone-mockup" class="iphone-img rotate-25" />
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="gpa_form">
-
-
-    <div class="calculator-box">
-      <h1 class="head_gpa">GPA CALCULATOR</h1>
-      <p id="mainp">
-        This gpa Calculator is based on the VIT grading
-        system.
-      </p>
-
-      <div id="courses">
-        <form class="key-0 ">
-          <p> <label id="course-row" for="Course">Courses:</label>
-            <label id="credit-row" for="credit-units">Credit Units:</label>
-            <label id="grade-row" for="grade">Grades: </label>
-          </p>
-          <input type="text" placeholder="Course" class="courses key-0" required />
-
-          <input type="number" class="credit-units key-0" placeholder="Credit Units" id="inputt" value="" required />
-
-          <select class="grade key-0 select" required>
-            <option class="grade" value="select">Select</option>
-            <option value="10">S</option>
-            <option value="9">A</option>
-            <option value="8">B</option>
-            <option value="7">C</option>
-            <option value="6">D</option>
-            <option value="5">E</option>
-            <option value="0">F</option>
-          </select>
-        </form>
-      </div>
-
-      <div class="btns">
-        <button class="buttonn" onclick="addCourse()">+ Add Course</button>
-        <button class="buttonn" onclick="removeCourse()">- Remove Course</button>
-        <button class="buttonn" onclick="calcgpa(); yo();">Calculate GPA</button>
-      </div>
-      <div class="lastp">
-        <p id="gpa-calc">Your gpa is:</p>
-      </div>
-
-    </div>
-    <script>
-      function yo() {
-        console.log('this is it')
-        const inp = document.getElementById("#inputt")
-
-        console.log(inp)
-      }
-    </script>
-
-  </section>
-  <section id="footer">
-    <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <h1>Join our Telegram Channel!<i class="fab fa-telegram-plane"></i></h1>
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <img src="ECS_15_CX-Careers_01-e1571300855316.png" alt="iphone-mockup" width="350" height="350">
-      </div>
-    </div>
-    </div>
-    <script src="gpa.js"></script>
-  </section>
-
         <script src="gpa.js"></script>
     </section> 
->
 </body>
 
 </html>
