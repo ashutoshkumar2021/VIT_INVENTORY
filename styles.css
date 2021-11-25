@@ -74,7 +74,14 @@ h1{
     margin-left: 55%;
 }
  
- 
+#preloader{
+    background:#000 url(bold-preloader.gif) no-repeat center;
+    background-size:15%;
+    height:100%;
+    width:100%;
+    position: fixed;
+    z-index:100;
+} 
 
 
 
