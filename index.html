@@ -410,6 +410,7 @@
 
 <body>
     <section id="title">
+        <div id="preloader"></div>
         <div class="container-fluid">
 
             <!--navigation bar-->
@@ -822,6 +823,12 @@
         </div>
         </div>
     </section>
+        <script>
+        var loader=document.getElementById("preloader");
+        window.addEventListener("load",function(){
+               loader.style.display="none";
+        })
+    </script>
 </body>
 
 </html>
