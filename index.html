@@ -403,14 +403,17 @@
             align-items: center;
             margin: 0 5px;
             height: 40px;
-            width: 40px;
-        }
+            width: 40px;}
+
+           
+        
     </style>
 </head>
 
 <body>
+
     <section id="title">
-        <div id="preloader"></div>
+    
         <div class="container-fluid">
 
             <!--navigation bar-->
@@ -436,12 +439,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="vitbclubs.html">VITB-CLUBS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
@@ -503,7 +506,7 @@
                     })
             
                 }
-            
+            window.addEventListener('load', onSignIn)
             
             </script>
     </section>
@@ -529,7 +532,7 @@
 
         </center>
         <center>
-            <p>All the resources at one place. Calculate Your CGPA,GPA , Estimate your CGPA ,See the Map of VIT Bhopal Campus</p>
+            <p>All the resources at one place. </p>
 
         </center>
         <div class="row">
@@ -679,12 +682,12 @@
                             <center> <div class="points">Academics</div></center>
                                 <center> <div class="points">Faculty</div></center>
                                     <center><div class="points">Alumni</div></center>
-                                         <a href="ffcs.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button">
+                                         <a href="database.html"><button class="btn btn-lg btn-block btn-outline-dark" type="button" >
                             Click Here</button></a>
                     </div>
                 </div>
             </div></div>
-            <div class="pri-col col-lg-4 col-md-6 col-sm-6">
+            <!-- <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
                     <div class="card-header coho">
                         <i class="fas fa-laptop"></i>
@@ -707,14 +710,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="pri-col col-lg-4 col-md-6 col-sm-6">
+            </div> -->
+            <!-- <div class="pri-col col-lg-4 col-md-6 col-sm-6">
                 <div class="card ho">
                     <div class="card-header coho">
                         <i class="fas fa-graduation-cap"></i>
                         <h3>VIT-BHOPAL CLUBS</h3>
-                    </div>
-                    <div class="card-body segmentcards " id="vitbclubs">
+                    </div> -->
+                    <!-- <div class="card-body segmentcards " id="vitbclubs">
                         <div class="content">
                             <center>
                                 <div class="points">Academics</div>
@@ -728,10 +731,10 @@
                             <a href="vitbclubs.html"><button class="btn btn-lg btn-block btn-outline-dark"
                                     type="button">
                                     Click Here</button></a>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="login" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -823,14 +826,7 @@
         </div>
         </div>
     </section>
-
-
-    <script>
-        var loader=document.getElementById("preloader");
-        window.addEventListener("load",function(){
-               loader.style.display="none";
-        })
-    </script>
+    
 </body>
 
 </html>
