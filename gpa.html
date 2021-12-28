@@ -28,7 +28,24 @@
       color: white;
     }
 
-   
+   #course-row {
+  font-size: 20px;
+  font-weight: bolder; 
+  margin-left: -2%;
+}
+
+#credit-row {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 13%;
+}
+
+#grade-row {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 8%;
+}
+
     .inp_headers
     {
       font-size: 20px;
@@ -203,12 +220,12 @@
             <li class="nav-item">
               <a class="nav-link" href="cgpa.html">CGPA CALCULATOR</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="vitbclubs.html">VITB CLUBS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="codingresources.html">CODING RESOURCES</a>
-            </li>
+            </li> -->
 
           </ul>
         </div>
@@ -262,27 +279,21 @@
             <option value="5">E</option>
             <option value="0">F</option>
           </select>
-          
+        </form>
       </div>
 
       <div class="btns">
         <button class="buttonn" onclick="addCourse()">+ Add Course</button>
         <button class="buttonn" onclick="removeCourse()">- Remove Course</button>
-        <button class="buttonn" onclick="calcgpa(); yo();">Calculate GPA</button>
+        <button class="buttonn" onclick="calcgpa()">Calculate GPA</button>
       </div>
       <div class="lastp">
         <p id="gpa-calc">Your gpa is:</p>
       </div>
 
     </div>
-    <script>
-      function yo() {
-        console.log('this is it')
-        const inp = document.getElementById("#inputt")
-
-        console.log(inp)
-      }
-    </script>
+          
+    
 
   </section>
   <section id="footer">
@@ -295,7 +306,7 @@
       </div>
     </div>
     </div>
-    <script src="gpa.js"></script>
+<script src="gpa.js"></script>
   </section>
 </body>
 
