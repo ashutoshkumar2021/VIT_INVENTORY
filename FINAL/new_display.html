@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>VIT Inventory</title>
+    <!--Google Fonts-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        .value_box {
+            border-color: black;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            text-decoration: solid;
+            background-color: rgb(141, 192, 250);
+            color: black;
+            flex-direction: column;
+            display: inline-block;
+
+        }
+#body1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 50px;
+    border-style: solid;
+}
+.container .title{
+ font-size: 25px;
+ font-weight: 500;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 3px;
+    background:rgb(51, 76, 219) ;
+}
+form .buton{
+    height: 45 px;
+    margin: 45px 0;
+}
+form .buton button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: rgb(51, 76, 219);
+}
+form{
+    margin: 20px 0 12px 0;
+}
+input,select{
+    height: 45px;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+    </style>
+        
+</head>
+</head>
+
+<body>
+    <section id="title">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <i class="fas fa-graduation-cap fa-5x"></i>
+                <a class="navbar-brand" href="">VIT-Inventory</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">GPA CALCULATOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">CGPA CALCULATOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">CGPA ESTIMATOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">ATTENDANCE CALCULATOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">VITB CLUBS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">CODING RESOURCES</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1>All Rounder Website for VITIANS!</h1>
+                    <button type="button" class="btn btn-dark btn-lg download-button" style="margin-left: 20%;">
+                        <i class="fas fa-user-plus"></i> SIGN UP
+                    </button>
+                    <button type="button" class="btn btn-lg btn-outline-light download-button">
+                        <i class="fas fa-sign-in-alt"></i> LOGIN
+                    </button>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <img src="highlights-document-browser-iphone.png" alt="iphone-mockup"
+                        class="iphone-img rotate-25" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="body1">
+        <?php
+    $teacher = $_POST['teacher'];
+    $sql = "SELECT AVG(ratingvalue) AS avgr FROM teachers WHERE teachername = '$teacher' ";
+    $connection= mysqli_connect("localhost","root", "",'teacher_review');
+    if($connection)
+    {
+        echo 'connection good';
+    }
+    else
+    {
+      echo 'connection failed because'. mysqli_connect_error();
+    }
+    
+$result_d = mysqli_query($connection,$sql);
+    $score = mysqli_fetch_assoc($result_d);
+    
+    
+    mysqli_free_result($result_d);
+    mysqli_close($connection);
+    ?>
+        <div class="container">
+            <form action ="/displayform.php" method = "post">
+            <p>Faculty of whom you want to get the review</p>
+            <label for="teacher"></label>
+               <select id="teacher" name="teacher" required>
+                <option value="" disabled selected hidden>Faculty Name</option>
+                   <option value="harihara">Dr. Harihara Padhy</option>
+                   <option value="Anand">Prof. Anand Motwani</option>
+                   <option value="Sivasanakran">Dr. Sivasanakran</option>
+                   <option value="Manisha">Dr. Manisha Jain</option>
+                   <option value="Shweta">Dr. Shweta Mukherjee</option>
+               </select>
+               <div class="buton">
+               <button type="submit" id="submitDetails"name = "search" class="btn btn-primary">Submit</button>
+            </div >
+            </form>
+            <div id="result" class='value_box'>The average rating for this teacher is:<div id="avgr_value">
+                <?php
+foreach($score as $sc)
+{
+ print_r($sc);
+}
+?>
+    </div>   
+ </div>
+    </div>
+    </section>
+    <section id="footer">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1>Join our Telegram Channel!<i class="fab fa-telegram-plane"></i></h1>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <img src="ECS_15_CX-Careers_01-e1571300855316.png" alt="iphone-mockup" width="350" height="350">
+            </div>
+        </div>
+        </div>
+    </section>
+    </body>
+    
+    </html>  
