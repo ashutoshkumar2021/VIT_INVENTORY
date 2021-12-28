@@ -234,7 +234,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <i class="fas fa-graduation-cap fa-5x"></i>
-                <a class="navbar-brand" href="">VIT-Inventory</a>
+                <a class="navbar-brand" href="indexS.html">VIT-Inventory</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo">
                     <span class="navbar-toggler-icon"></span>
@@ -250,12 +250,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="attendance.html">ATTENDANCE CALCULATOR</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="">VITB CLUBS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">CODING RESOURCES</a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </div>
@@ -374,7 +374,7 @@
 
 
 
-            function dispbox(row)
+          //  function dispbox(row)
             {
             
             
@@ -397,8 +397,9 @@
             }
 
 
-           function custom_tch()
-            {
+          // function custom_tch()
+            { document.getElementById('btns').style.display = 'none'
+     
                 console.log('custom');
               let  labels = document.createElement('div')
                 labels.classList.add('label_row')
@@ -412,7 +413,7 @@
                 let form1 = document.createElement('form')
                 form1.setAttribute('id' , 'form1')
                 let new_row = document.createElement('div')
-                new_row.setAttribute('id' , `sem-${chos_row_counter}`)
+                //new_row.setAttribute('id' , `sem-${chos_row_counter}`)
                 new_row.classList.add('new_row')
 
                 let disp_currentSem = document.createElement("div");
@@ -449,7 +450,7 @@
                   
                     new_row.appendChild(disp_currentCGPA)
 
-                    form1.appendChild(new_row)
+                   // form1.appendChild(new_row)
 
                     play_area.appendChild(form1)
 
@@ -484,13 +485,14 @@ else{
  alert.innerHTML = `<div class="alert alert-warning" role="alert">
               There cannot be more than 8 semesters.
               </div>`
-              play_area_main.appendChild(alert)
+              //play_area_main.appendChild(alert)
 }
 }
            
    
    
-   function defaultCalc() {
+   //function defaultCalc() {
+    document.getElementById('btns').style.display = 'none'
                 console.log('default')
                 console.log(desired)
 
@@ -529,7 +531,7 @@ else{
                 
                 }
 
-            }
+            
 
 
 
@@ -553,6 +555,7 @@ else{
                 whereas                with custom you can select the no.of credits taken`
                 let btnsDiv = document.createElement("div");
                 btnsDiv.classList.add('btns')
+                btnsDiv.setAttribute('id', 'btns')
                 btnsDiv.innerHTML = `  <button class="buttonn" onclick="defaultCalc()">Default</button>
         <button class="buttonn" onclick="custom_tch()">Custom</button>
         `
@@ -699,6 +702,7 @@ function restart()
                 This CGPA Estimator Calculator is based on the VIT grading
                 system.
             </p>
+
             <div id="alert"> </div>
             <div id="input_content">
                 <form name="form1" class="key-0 ">
@@ -713,6 +717,7 @@ function restart()
                         <input type="number" class="credit-units key-0" placeholder="" value="" id="current" required />
                         <input type="number" class="credit-units key-0" placeholder="" value="" id="credits_taken"
                             required />
+
                     </div>
                     <div id="inp_row_2">
                         <p> <label class="inp_headers" for="total_cre">Total credits till now :</label>
@@ -732,6 +737,7 @@ function restart()
                
                 <button class="button" onclick="calculate()">Calculate</button>
             </div>
+
             <div id='result'></div>
             <div class="lastp" id="last_p">
                 <p id="cgpa-final">Required CGPA in this semester:</p>
@@ -740,7 +746,7 @@ function restart()
             </div>
         </div>
 `
-mb.innerHTML = fresh
+//mb.innerHTML = fresh
 }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
