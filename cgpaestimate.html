@@ -374,7 +374,7 @@
 
 
 
-          //  function dispbox(row)
+            function dispbox(row)
             {
             
             
@@ -397,7 +397,7 @@
             }
 
 
-          // function custom_tch()
+           function custom_tch()
             { document.getElementById('btns').style.display = 'none'
      
                 console.log('custom');
@@ -413,7 +413,7 @@
                 let form1 = document.createElement('form')
                 form1.setAttribute('id' , 'form1')
                 let new_row = document.createElement('div')
-                //new_row.setAttribute('id' , `sem-${chos_row_counter}`)
+                new_row.setAttribute('id' , `sem-${chos_row_counter}`)
                 new_row.classList.add('new_row')
 
                 let disp_currentSem = document.createElement("div");
@@ -450,7 +450,7 @@
                   
                     new_row.appendChild(disp_currentCGPA)
 
-                   // form1.appendChild(new_row)
+                    form1.appendChild(new_row)
 
                     play_area.appendChild(form1)
 
@@ -485,13 +485,13 @@ else{
  alert.innerHTML = `<div class="alert alert-warning" role="alert">
               There cannot be more than 8 semesters.
               </div>`
-              //play_area_main.appendChild(alert)
+              play_area_main.appendChild(alert)
 }
 }
            
    
    
-   //function defaultCalc() {
+   function defaultCalc() {
     document.getElementById('btns').style.display = 'none'
                 console.log('default')
                 console.log(desired)
@@ -531,7 +531,7 @@ else{
                 
                 }
 
-            
+            }
 
 
 
@@ -746,7 +746,7 @@ function restart()
             </div>
         </div>
 `
-//mb.innerHTML = fresh
+mb.innerHTML = fresh
 }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
