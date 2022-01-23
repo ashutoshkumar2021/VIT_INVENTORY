@@ -1,1 +1,1 @@
-PROJECT
+Vit Inventory it is a website for the students of vit check their acdemic performance across semesters and many other stuffs. NO INSTALLATION IS REQUIRED. the functions of this website can be availed simply by visiting the following link:- https://vit-inventory.netlify.app/
